@@ -3,14 +3,11 @@
 
 <head>
   <title>RPS Game</title>
-  <!-- Link CSS here -->
-  <link href="css/style.css" rel="stylesheet">
-  <!-- Link JQuery here -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Link Javascript File here -->
-  <script src="js/script.js"></script>
-  <!-- Latest compiled and minified Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
 </head>
 
 <body>
@@ -26,33 +23,55 @@
         6. Add a div to record the Winner.
      -->
   <div class="container text-center">
-    <h1>Rock Paper or Scissors ??</h1>
+    <button data-toggle="modal" data-target="#exampleModal"><h1>Rock Paper or Scissors ??</h1></button>
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                            </div>
+                            <div class="modal-body">
+                                <center>
+                                    <p>Join Along</p>
+                                </center>
+                                <center><img src="css/RPS.png" class=" mg-responsive" style="height:200px; width:200px;"></center>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
   </div>
   <div class="container">
   <div class="row">
     <div class="col-12">
-  <center><p>Instructions on how to play this game:</p></center>
-  </div>
-  </div>
-  <ol>
-    <center><li>You have an option to choose three of the following options </li>
-    <ul>
-      <li>Rock</li>
-      <li>Paper</li>
-      <li>Scissors</li>
-    </ul>
-    <li>The Way it works Paper beats Rock, Rock beats Scissors, and Scissors beats Paper.</li>
-    <li>When you choose your answer/choice the computer randomly loads an answer and the two of you battle.</li></center>
-  </ol>
+  <center><p>Instructions on how to play this game </p></center>
+    
 </div>
-<center><img src="https://i.ytimg.com/vi/mixylW7OIOQ/maxresdefault.jpg" class=" mg-responsive" style="height:300px; width:400px;"></center>
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rock-paper-scissors.svg/1200px-Rock-paper-scissors.svg.png" class=" mg-responsive" style="height:300px; width:400px;"></center>
+<center><p>When you choose your answer/choice the computer randomly loads an answer and the two of you battle.</p></center>
+<center><h2>So....Rock, Paper, or Scissors ?</h2></center>
   <div class="container text-center">
-      <h2>So..Rock Paper or Scissors</h2>
-       </div>
-      <div class="container text-center">
-      <input><button class="btn btn-primary">Shoot !?!?!</button>
+      <div class="game">
+      <div>
+        <img id="user" src="http://www.stickpng.com/assets/images/585e4bf3cb11b227491c339a.png">
       </div>
-
+      <div >
+         <img id="Com" src="https://openclipart.org/image/2400px/svg_to_png/213214/Computer-icon.png">
+      </div>
+    </div>
+    <div>
+      <input id="input" placeholder="Your Answer">
+      <button id="button">Play</button>
+    </div>
+    <div>
+      <center><h1 id="Result">Result</h1></center>
+    </div>
+   <script type="text/javascript" src="js/script.js"></script>
 
 </body>
 
